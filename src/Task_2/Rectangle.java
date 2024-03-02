@@ -51,7 +51,7 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString(){
-        return  "A Rectangle with width = " + width + "and length = " + length + "which is"
-                +"a subclass of" + super.toString();
+        return  " A Rectangle with width = " + width + " and length = " + length + " which is "
+                +"a subclass of " + super.toString();
     }
 }
