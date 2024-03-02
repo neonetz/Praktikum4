@@ -31,4 +31,7 @@ public class Employee extends Sortable {
     private int hireday;
     private int hiremonth;
     private int hireyear;
+    public double getSalary() {
+        return salary;
+    }
 }

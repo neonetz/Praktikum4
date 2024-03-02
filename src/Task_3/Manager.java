@@ -14,8 +14,25 @@ public class Manager extends Employee{
         double bonus = 0.5 * (currentYear - hireYear());
         super.raiseSalary(byPercent + bonus);
     }
+    @Override
+    public int compare(Sortable b) {
+        if (b instanceof Manager) {
+            Manager mb = (Manager) b;
+            // Bandingkan berdasarkan gaji
+            if (getSalary() < mb.getSalary()) return -1;
+            if (getSalary() > mb.getSalary()) return 1;
+            return 0;
+        } else {
+            // Jika objek yang dibandingkan bukan instance dari Manager, kembalikan nilai default
+            return super.compare(b);
+        }
+    }
     public String getSecretaryName(){
         return secretaryName;
     }
     private String secretaryName;
+
+    public String toString() {
+        return super.toString() + ", Sekretaris: " + secretaryName;
+    }
 }
